@@ -15,6 +15,7 @@ func main() {
 	// Отдаём index.html по запросу на http://localhost:8080
 	http.Handle("/", fs)
 	// Регистрируем обработчики запросов пользователя
+	// специально для Гита
 	http.HandleFunc("/doCulc", doCulc)
 	http.HandleFunc("/sum", calc.Sum)
 	http.HandleFunc("/sub", calc.Sub)

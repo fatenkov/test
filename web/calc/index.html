@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Написать разметку для калькулятора -->
+    <h1>Простой калькулятор</h1>
+    <!--  будет блок с ответом              -->
+    {{if .IsAnswerExist}}
+           <h3>{{.Answer}}</h3>
+    {{end}}
+    {{if .Error}}
+           <h3>{{.Error}}</h3>
+    {{end}}
+    <!--   Наша рабочая форма  -->
+    <form action="/doCulc" method="POST">
+        <!--label>Число №1 :</label-->
+        <input name="number1" type="number" value="{{.Num1}}">
+        <input name="number2" type="number" value="{{.Num2}}"><br>
+        <button type="submit" name="operation" id="sum" value="sum" {{if eq .Operation "sum"}} checked {{end}}>Сложить</button><br>
+        <button type="submit" name="operation" id="sub" value="sub" {{if eq .Operation "sub"}} checked {{end}}>Вычесть</button><br>
+        <button type="submit" name="operation" id="mult" value="mult" {{if eq .Operation "mult"}} checked {{end}}>Умножить</button><br>
+        <button type="submit" name="operation" id="div" value="div" {{if eq .Operation "div"}} checked {{end}}>Поделить</button><br>
+        <br>
+        <script>
+            function sumR() {
+                for(let i=1; i<=2; i++) {
+                  alert("Кролик номер " + i);
+                }
+             }
+        </script>
+        <input type="button" onclick="sumR()" value="СУММА !">
+
+    </form>
+
+    <input type="button" onclick = "sumB()" value="Кнопка">
+   
+
+    <p>Результат точно будет</p>
+    <button type="button">Выход</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

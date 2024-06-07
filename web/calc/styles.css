@@ -1,0 +1,14 @@
+/* Стилизовать разметку */
+/*  TODO: почему то если файл назывался style.css не работало, разобраться*/
+html {
+    background-color: #c8d2db;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  }
+body {
+    width: 800px;
+    margin: 5em auto; /* опускаем относительно верха на 5 текущих размеров шрифта остальные стороны авто */
+    background-color: #b2e1a2;
+    padding: 0 20px 20px 20px;
+    border: 1px solid rgb(31, 76, 32);
+  }
+

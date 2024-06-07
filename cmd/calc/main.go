@@ -16,6 +16,7 @@ func main() {
 	http.Handle("/", fs)
 	// Регистрируем обработчики запросов пользователя
 	// специально для Гита
+	// 2-я попытка
 	http.HandleFunc("/doCulc", doCulc)
 	http.HandleFunc("/sum", calc.Sum)
 	http.HandleFunc("/sub", calc.Sub)
